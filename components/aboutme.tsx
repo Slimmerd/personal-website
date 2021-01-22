@@ -13,22 +13,23 @@ const Container = styled.div`
 `
 
 const AboutMe = () => {
-
+    // @ts-ignore
     const lang: JSX.Element = (
         <ul>
-            {AboutMeInfo[1].desc_text.map((item: String, index: number) => <li key={index}>{item}</li>)}
+            {AboutMeInfo[1].arr_desc_text?.map((item: String, index: number) => <li key={index}>{item}</li>)}
         </ul>)
 
 
-    const desc_tech: JSX.Element = (
+    // @ts-ignore
+        const desc_tech: JSX.Element = (
         <div className="grid grid-cols-2 gap-2">
             <ul>
                 <li className={'heading'}>Frontend:</li>
-                {AboutMeInfo[2].desc_text[0].map((item: String, index: number) => <li key={index}>{item}</li>)}
+                {AboutMeInfo[2].arr_arr_desc_text![0].map((item: String, index: number) => <li key={index}>{item}</li>)}
             </ul>
             <ul>
                 <li className={'heading'}>Backend:</li>
-                {AboutMeInfo[2].desc_text[1].map((item: String, index: number) => <li key={index}>{item}</li>)}
+                {AboutMeInfo[2]. arr_arr_desc_text![1].map((item: String, index: number) => <li key={index}>{item}</li>)}
 
             </ul>
         </div>)

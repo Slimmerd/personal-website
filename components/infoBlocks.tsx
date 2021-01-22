@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { RefObject } from 'react';
 import styled from 'styled-components';
 import { PersonalProjects } from '../utils/projects';
 import LinksCard from './common/linksCards';
@@ -27,7 +27,7 @@ const Content = styled.div`
   }
 `
 
-const InfoBlocks: React.FC<{projectsRef: React.MutableRefObject<null>, linksRef:React.MutableRefObject<null> }> = ({projectsRef,linksRef}) => {
+const InfoBlocks: React.FC<{projectsRef: RefObject<HTMLElement>, linksRef:RefObject<HTMLElement> }> = ({projectsRef,linksRef}) => {
     return (
         <Container>
             <Content>
