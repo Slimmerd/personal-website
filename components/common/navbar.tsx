@@ -4,7 +4,7 @@ import {useRouter} from 'next/router'
 import useWindowSize from '../../utils/hooks/UseWindowSize'
 import styled from "styled-components";
 
-const NavContaier = styled.div`
+const NavContainer = styled.div`
   nav ul li a:before,
   nav ul li a:after {
     content: '';
@@ -29,8 +29,8 @@ const NavContaier = styled.div`
 `
 
 const NavBar = () => {
-    const navigationMobileRef = useRef<HTMLElement | null>(null)
-    const mobileIconRef = useRef<HTMLElement | null>(null)
+    const navigationMobileRef = useRef<HTMLUListElement>(null)
+    const mobileIconRef = useRef<HTMLDivElement>(null)
     const [mobileNavOpen, setMobileNavOpen] = useState(false)
     const router = useRouter()
     const {width} = useWindowSize()
@@ -93,7 +93,7 @@ const NavBar = () => {
     }
 
     return (
-        <NavContaier>
+        <NavContainer>
         <nav className="fixed bg-gray-700 h-16 w-full z-50">
             <div className="flex h-full container mx-auto justify-between items-center px-4 md:px-0">
                 <Link href={{pathname: '/'}}>
@@ -131,7 +131,7 @@ const NavBar = () => {
                 </div>
             </div>
         </nav>
-        </NavContaier>
+        </NavContainer>
     )
 }
 

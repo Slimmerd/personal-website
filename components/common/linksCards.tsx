@@ -33,7 +33,6 @@ const LinksCard: React.FC<{ name: String }> = ({name}) => {
     let newLink
     for (let item in myLinks){
         if (item === name){
-             // TS7053
              newLink = myLinks[item]
         }
     }

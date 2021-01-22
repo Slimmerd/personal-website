@@ -19,9 +19,9 @@ const GlobalContainer = styled.div`
 `
 
 const IndexPage = () => {
-    const aboutmeRef = useRef(null)
-    const projectsRef = useRef(null)
-    const linksRef = useRef(null)
+    const aboutMeRef = useRef<HTMLElement>(null)
+    const projectsRef = useRef<HTMLElement>(null)
+    const linksRef = useRef<HTMLElement>(null)
 
     useEffect(() => {
         smoothscroll.polyfill()
@@ -30,7 +30,7 @@ const IndexPage = () => {
     useEffect(() => {
         let observer: IntersectionObserver
         if (
-            aboutmeRef.current &&
+            aboutMeRef.current &&
             projectsRef.current &&
             linksRef.current
         ) {
@@ -51,18 +51,18 @@ const IndexPage = () => {
                     }
                 })
             }, options)
-            observer.observe(aboutmeRef.current)
+            observer.observe(aboutMeRef.current)
             observer.observe(projectsRef.current)
             observer.observe(linksRef.current)
         }
         return () => observer.disconnect()
-    }, [aboutmeRef, projectsRef, linksRef])
+    }, [aboutMeRef, projectsRef, linksRef])
 
     return (
         <>
             <HelloWorld/>
             <GlobalContainer className={'container mx-auto'}>
-                <section id={'aboutme'} ref={aboutmeRef}>
+                <section id={'aboutme'} ref={aboutMeRef}>
                     <AboutMe/>
                 </section>
 
