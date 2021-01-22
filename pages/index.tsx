@@ -3,6 +3,7 @@ import HelloWorld from "../components/hello";
 import AboutMe from "../components/aboutme";
 import InfoBlocks from '../components/infoBlocks';
 import styled from 'styled-components';
+import Head from 'next/head'
 
 import smoothscroll from 'smoothscroll-polyfill'
 
@@ -60,6 +61,13 @@ const IndexPage = () => {
 
     return (
         <>
+            <Head>
+                <title>Daniil Silin website</title>
+                <meta property="og:title" content="Daniil Silin website" key="title" />
+                <meta property="og:description" content="Daniil Silin's personal website" />
+                <meta property="og:locale" content="en_GB" />
+                <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+            </Head>
             <HelloWorld/>
             <GlobalContainer className={'container mx-auto'}>
                 <section id={'aboutme'} ref={aboutMeRef}>
