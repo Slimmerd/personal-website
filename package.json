@@ -11,11 +11,10 @@
     "@react-spring/core": "^9.0.0-rc.3",
     "autoprefixer": "^10.2.3",
     "next": "latest",
-    "next-transpile-modules": "^6.0.0",
     "postcss": "^8.2.4",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "react-spring": "^8.0.27",
+    "smoothscroll-polyfill": "^0.4.4",
     "styled-components": "^5.2.1",
     "tailwindcss": "^2.0.2"
   },
@@ -23,6 +22,7 @@
     "@types/node": "^14.14.21",
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
+    "@types/smoothscroll-polyfill": "^0.3.1",
     "@types/styled-components": "^5.1.7",
     "typescript": "^4.1.3"
   },

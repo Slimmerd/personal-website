@@ -4,10 +4,11 @@ import AboutMe from "../components/aboutme";
 import InfoBlocks from '../components/infoBlocks';
 import styled from 'styled-components';
 
+import smoothscroll from 'smoothscroll-polyfill'
+
 const GlobalContainer = styled.div`
   cursor: default;
   margin: 0 auto;
-  max-width: 1536px;
 
   section::before {
     display: block;
@@ -21,6 +22,10 @@ const IndexPage = () => {
     const aboutmeRef = useRef(null)
     const projectsRef = useRef(null)
     const linksRef = useRef(null)
+
+    useEffect(() => {
+        smoothscroll.polyfill()
+    })
 
     useEffect(() => {
         let observer: IntersectionObserver
@@ -56,13 +61,13 @@ const IndexPage = () => {
     return (
         <>
             <HelloWorld/>
-            <div className={'container mx-auto'}>
+            <GlobalContainer className={'container mx-auto'}>
                 <section id={'aboutme'} ref={aboutmeRef}>
                     <AboutMe/>
                 </section>
 
                 <InfoBlocks linksRef={linksRef} projectsRef={projectsRef}/>
-            </div>
+            </GlobalContainer>
         </>
     )
 }
