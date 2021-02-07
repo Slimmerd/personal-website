@@ -10,7 +10,7 @@ const ProjectCard = styled.div`
   transition: transform .4s ease-out 0s;
 
   &:hover {
-    transform: scale(1.01);
+    transform: translateZ(0) scale(1.01);
   }
 
   .header {
@@ -29,7 +29,6 @@ const ProjectCard = styled.div`
     font-weight: 400;
     overflow: hidden;
     background: linear-gradient(to right, #d41118, #d41118 50%, #C65F63 50%);
-    background-clip: text;
 
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
