@@ -8,7 +8,7 @@ type TAboutme = {
 export const AboutMeInfo: Array<TAboutme> = [
     {
         heading_text: "About me:",
-        desc_text: "My name is Daniil, I am computer science student. Currently seeking for internships. I have experience in full-stack development. However, I am willing to learn Machine Learning."
+        desc_text: "My name is Daniil, I am computer science student. Currently seeking for internships. I have experience in full-stack development."
     },
     {
         heading_text: "Languages:",
