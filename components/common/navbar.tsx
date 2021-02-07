@@ -11,7 +11,7 @@ const NavContainer = styled.div`
     position: absolute;
     left: 0;
     bottom: -5px;
-    width: 0px;
+    width: 0;
     height: 2px;
     margin: 5px 0 0;
     transition: all 0.3s ease-in-out;
@@ -55,28 +55,28 @@ const NavBar = () => {
     const renderNavigationItems = () => {
         return (
             <>
-                <li className="sm:mr-6">
+                <li className="md:mr-6">
                     <Link href={{pathname: '/', hash: 'aboutme'}}>
                         <a className="relative" onClick={linkClicked}>
                             About me
                         </a>
                     </Link>
                 </li>
-                <li className="mt-2 sm:mt-0 sm:mr-6">
+                <li className="mt-2 md:mt-0 md:mr-6">
                     <Link href={{pathname: '/', hash: 'projects'}}>
                         <a className="relative" onClick={linkClicked}>
                             Projects
                         </a>
                     </Link>
                 </li>
-                <li className="mt-2 sm:mt-0 sm:mr-6">
+                <li className="mt-2 md:mt-0 md:mr-6">
                     <Link href={{pathname: '/', hash: 'links'}}>
                         <a className="relative" onClick={linkClicked}>
                             Links
                         </a>
                     </Link>
                 </li>
-                <li className="mt-2 sm:mt-0">
+                <li className="mt-2 md:mt-0">
                     <Link href="/cv">
                         <a
                             onClick={linkClicked}
@@ -104,7 +104,7 @@ const NavBar = () => {
                 <ul className="hidden md:flex">{renderNavigationItems()}</ul>
                 <ul
                     ref={navigationMobileRef}
-                    className="md:hidden absolute flex flex-col w-full top-16 left-0 py-3 items-center bg-darkPurple dark:bg-orange transform translate-x-full"
+                    className="md:hidden absolute flex flex-col w-full top-16 left-0 py-3 items-center bg-default-blue transform translate-x-full"
                 >
                     {renderNavigationItems()}
                 </ul>
@@ -114,18 +114,18 @@ const NavBar = () => {
                     className="md:hidden order-3 h-6 w-5 cursor-pointer relative"
                 >
           <span
-              className={`transform transition duration-300 ease-in-out absolute h-1 w-full bg-darkPurple dark:bg-orange rounded-lg left-0 ${
-                  mobileNavOpen ? 'rotate-135 top-2' : 'rotate-0'
+              className={`transform transition duration-300 ease-in-out absolute h-1 w-full bg-white rounded-lg left-0 ${
+                  mobileNavOpen ? 'rotate-45 top-2' : 'rotate-0'
               }`}
           />
                     <span
-                        className={`absolute transition duration-300 ease-in-out h-1 w-full bg-darkPurple dark:bg-orange rounded-lg left-0 top-2 ${
-                            mobileNavOpen ? 'opacity-0 -left-40' : 'opacity-100'
+                        className={`absolute transition duration-300 ease-in-out h-1 w-full bg-white rounded-lg left-0 top-2 ${
+                            mobileNavOpen ? 'opacity-0' : 'opacity-100'
                         }`}
                     />
                     <span
-                        className={`transform transition duration-300 ease-in-out absolute h-1 w-full bg-darkPurple dark:bg-orange rounded-lg left-0 ${
-                            mobileNavOpen ? '-rotate-135 top-2' : 'rotate-0 top-4'
+                        className={`transform transition duration-300 ease-in-out absolute h-1 w-full bg-white rounded-lg left-0 ${
+                            mobileNavOpen ? '-rotate-45 top-2' : 'rotate-0 top-4'
                         }`}
                     />
                 </div>

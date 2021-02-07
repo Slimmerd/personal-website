@@ -18,7 +18,7 @@ export const PersonalProjects = [
         Backend: ["Express", "Helmet", "Mongoose", "GraphQL", "Docker"],
     }, {
         Name: "Personal website",
-        Description: "Implemented website...",
+        Description: "Performed website using Next.js, Vercel and typescript for the first time for web development",
         WebsiteLink: null,
         Github: "https://github.com/Slimmerd/personal-website",
         Web: true,
