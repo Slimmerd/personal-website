@@ -1,12 +1,11 @@
-import Navigation from './navbar'
+import Navigation from '../common/navbar'
 import * as React from 'react'
 
 
-
-const Layout: React.FC= ({children}) => {
+const Layout: React.FC = ({children}) => {
     return (
         <>
-            <Navigation />
+            <Navigation/>
             <main className="pt-16">{children}</main>
         </>
     )

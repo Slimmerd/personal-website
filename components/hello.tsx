@@ -8,7 +8,7 @@ const Container = styled.div`
     align-items: center;
     height: 500px;
     font-size: 6rem;
-}
+  }
 `
 
 const HelloWorld = () => {

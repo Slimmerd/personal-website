@@ -9,7 +9,7 @@ const Card = styled.div`
   box-shadow: 0 22px 40px rgba(0, 0, 0, 0.12);
   transition: transform .4s ease-out 0s;
 
-  &:hover{
+  &:hover {
     transform: scale(1.01);
   }
 `
@@ -24,7 +24,7 @@ const Content = styled.div`
   }
 `
 
-const CardComponent: React.FC<{heading: String,text:  JSX.Element}>= ({heading, text}) => {
+const CardComponent: React.FC<{ heading: String, text: JSX.Element }> = ({heading, text}) => {
     return (
         <Card>
             <Content>

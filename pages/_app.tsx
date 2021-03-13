@@ -4,7 +4,7 @@ import {ThemeProvider} from 'styled-components'
 import "tailwindcss/tailwind.css";
 import GlobalStyle from '../styles/global'
 import theme from '../styles/theme'
-import Layout from "../components/common/layout";
+import Layout from "../components/layout/layout";
 
 const MyApp: React.FC<AppProps> = ({Component, pageProps}) => {
 

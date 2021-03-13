@@ -1,6 +1,6 @@
-import Document, { DocumentContext, Head, Html, Main, NextScript } from 'next/document'
+import Document, {DocumentContext, Head, Html, Main, NextScript} from 'next/document'
 import React from 'react'
-import { ServerStyleSheet } from 'styled-components'
+import {ServerStyleSheet} from 'styled-components'
 
 export default class MyDocument extends Document {
     static async getInitialProps(ctx: DocumentContext) {
@@ -33,18 +33,18 @@ export default class MyDocument extends Document {
         return (
             <Html>
                 <Head>
-                    <meta charSet="utf-8" />
+                    <meta charSet="utf-8"/>
 
                     <link
                         href="https://fonts.googleapis.com/css?family=Roboto:400,500,700"
                         rel="stylesheet"
                     />
 
-                    <link rel="icon" href="/static/favicon.png" />
+                    <link rel="icon" href="/static/favicon.png"/>
                 </Head>
                 <body>
-                <Main />
-                <NextScript />
+                <Main/>
+                <NextScript/>
                 </body>
             </Html>
         )

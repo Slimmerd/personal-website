@@ -1,12 +1,12 @@
 import React from 'react';
 import Image from "next/image";
 import styled from 'styled-components';
-import {myLinks} from "../../utils/links";
+import {myLinks} from "../../../utils/links";
 
 const CardStyle = styled.div`
   font-size: 1.5rem;
   font-weight: 500;
-  
+
   padding: 35px;
   height: 100px;
   display: flex;
@@ -16,13 +16,13 @@ const CardStyle = styled.div`
   background: linear-gradient(to right, #333644, #333644 50%, #FFF 50%);
   background-size: 200% 100%;
   background-position: 100%;
-  transition: background-position 275ms ease;
+  transition: background-position 475ms ease;
 
   &:hover {
     background-position: 0 100%;
     color: #FFF;
   }
-    
+
   .text {
     margin: 0 auto;
   }
@@ -31,9 +31,9 @@ const CardStyle = styled.div`
 
 const LinksCard: React.FC<{ name: String }> = ({name}) => {
     let newLink
-    for (let item in myLinks){
-        if (item === name){
-             newLink = myLinks[item]
+    for (let item in myLinks) {
+        if (item === name) {
+            newLink = myLinks[item]
         }
     }
 

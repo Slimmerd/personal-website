@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components'
+import {createGlobalStyle} from 'styled-components'
 
 export default createGlobalStyle`
   * {
@@ -7,6 +7,7 @@ export default createGlobalStyle`
     box-sizing: border-box;
     scroll-behavior: smooth;
   }
+
   body {
     background: ${props => props.theme.colors.background};
     color: ${props => props.theme.colors.text};
