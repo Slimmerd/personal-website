@@ -56,9 +56,9 @@ const NavBar = () => {
         return (
             <>
                 <li className="md:mr-6">
-                    <Link href={{pathname: '/', hash: 'aboutme'}}>
+                    <Link href={{pathname: '/', hash: 'main'}}>
                         <a className="relative" onClick={linkClicked}>
-                            About me
+                            Main
                         </a>
                     </Link>
                 </li>
@@ -94,43 +94,43 @@ const NavBar = () => {
 
     return (
         <NavContainer>
-        <nav className="fixed bg-gray-700 h-16 w-full z-50">
-            <div className="flex h-full container mx-auto justify-between items-center px-4 md:px-0">
-                <Link href={{pathname: '/'}}>
-                    <a className="logo flex flex-row text-2xl">
-                        <div className="letter inline-block top-0 relative">nrkkk</div>
-                    </a>
-                </Link>
-                <ul className="hidden md:flex">{renderNavigationItems()}</ul>
-                <ul
-                    ref={navigationMobileRef}
-                    className="md:hidden absolute flex flex-col w-full top-16 left-0 py-3 items-center bg-default-blue transform translate-x-full"
-                >
-                    {renderNavigationItems()}
-                </ul>
-                <div
-                    ref={mobileIconRef}
-                    onClick={toggleMobileNavigation}
-                    className="md:hidden order-3 h-6 w-5 cursor-pointer relative"
-                >
+            <nav className="fixed bg-gray-700 h-16 w-full z-50">
+                <div className="flex h-full container mx-auto justify-between items-center px-4 md:px-0">
+                    <Link href={{pathname: '/'}}>
+                        <a className="logo flex flex-row text-2xl">
+                            <div className="letter inline-block top-0 relative">nrkkk</div>
+                        </a>
+                    </Link>
+                    <ul className="hidden md:flex">{renderNavigationItems()}</ul>
+                    <ul
+                        ref={navigationMobileRef}
+                        className="md:hidden absolute flex flex-col w-full top-16 left-0 py-3 items-center bg-default-blue transform translate-x-full"
+                    >
+                        {renderNavigationItems()}
+                    </ul>
+                    <div
+                        ref={mobileIconRef}
+                        onClick={toggleMobileNavigation}
+                        className="md:hidden order-3 h-6 w-5 cursor-pointer relative"
+                    >
           <span
               className={`transform transition duration-300 ease-in-out absolute h-1 w-full bg-white rounded-lg left-0 ${
                   mobileNavOpen ? 'rotate-45 top-2' : 'rotate-0'
               }`}
           />
-                    <span
-                        className={`absolute transition duration-300 ease-in-out h-1 w-full bg-white rounded-lg left-0 top-2 ${
-                            mobileNavOpen ? 'opacity-0' : 'opacity-100'
-                        }`}
-                    />
-                    <span
-                        className={`transform transition duration-300 ease-in-out absolute h-1 w-full bg-white rounded-lg left-0 ${
-                            mobileNavOpen ? '-rotate-45 top-2' : 'rotate-0 top-4'
-                        }`}
-                    />
+                        <span
+                            className={`absolute transition duration-300 ease-in-out h-1 w-full bg-white rounded-lg left-0 top-2 ${
+                                mobileNavOpen ? 'opacity-0' : 'opacity-100'
+                            }`}
+                        />
+                        <span
+                            className={`transform transition duration-300 ease-in-out absolute h-1 w-full bg-white rounded-lg left-0 ${
+                                mobileNavOpen ? '-rotate-45 top-2' : 'rotate-0 top-4'
+                            }`}
+                        />
+                    </div>
                 </div>
-            </div>
-        </nav>
+            </nav>
         </NavContainer>
     )
 }

@@ -34,7 +34,7 @@ const ProjectCard = styled.div`
     -webkit-text-fill-color: transparent;
     background-size: 200% 100%;
     background-position: 100%;
-    transition: background-position 275ms ease;
+    transition: background-position 375ms ease;
     text-decoration: none;
 
     &:hover {
