@@ -73,7 +73,7 @@ const InfoBlocks: React.FC<{ projectsRef: RefObject<HTMLElement>, linksRef: RefO
 
 
                 <section id={'projects'} ref={projectsRef}>
-                    <div className={'projects'}>📦 My projects:</div>
+                    <div className={'projects'}>📦 I worked on:</div>
                     <div className="cards grid grid-cols-1 gap-16 md:grid-cols-2 ">
                         {PersonalProjects.map((item, index) => <ProjectCards item={item} key={index}/>)}
                     </div>

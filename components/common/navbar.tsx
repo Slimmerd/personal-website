@@ -1,6 +1,6 @@
 import React, {useRef, useState} from 'react'
 import Link from 'next/link'
-import {useRouter} from 'next/router'
+// import {useRouter} from 'next/router'
 import useWindowSize from '../../utils/hooks/UseWindowSize'
 import styled from "styled-components";
 
@@ -32,7 +32,7 @@ const NavBar = () => {
     const navigationMobileRef = useRef<HTMLUListElement>(null)
     const mobileIconRef = useRef<HTMLDivElement>(null)
     const [mobileNavOpen, setMobileNavOpen] = useState(false)
-    const router = useRouter()
+    // const router = useRouter()
     const {width} = useWindowSize()
 
     const toggleMobileNavigation = () => {
@@ -76,18 +76,18 @@ const NavBar = () => {
                         </a>
                     </Link>
                 </li>
-                <li className="mt-2 md:mt-0">
-                    <Link href="/cv">
-                        <a
-                            onClick={linkClicked}
-                            className={`relative ${
-                                router.pathname === '/cv' ? 'active' : ''
-                            }`}
-                        >
-                            CV
-                        </a>
-                    </Link>
-                </li>
+                {/*<li className="mt-2 md:mt-0">*/}
+                {/*    <Link href="/cv">*/}
+                {/*        <a*/}
+                {/*            onClick={linkClicked}*/}
+                {/*            className={`relative ${*/}
+                {/*                router.pathname === '/cv' ? 'active' : ''*/}
+                {/*            }`}*/}
+                {/*        >*/}
+                {/*            CV*/}
+                {/*        </a>*/}
+                {/*    </Link>*/}
+                {/*</li>*/}
             </>
         )
     }

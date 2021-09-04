@@ -12,10 +12,10 @@ export const AboutMeInfo: Array<TAboutme> = [
     },
     {
         heading_text: "🔩 Languages:",
-        arr_desc_text: ["JavaScript", "TypeScript", "Python", "C#"]
+        arr_desc_text: ["JavaScript", "TypeScript", "Python", "Dart", "C#"]
     },
     {
         heading_text: "🧰 Technologies:",
-        arr_arr_desc_text: [["React", "Redux", "Next.js", "HTML", "CSS", "Styled-Components"], ["Node.js", "Express", "REST API", "GraphQL"]]
+        arr_arr_desc_text: [["React", "Redux", "Next.js", "Styled-Components"], ["Node.js", "Express", "REST API", "GraphQL"]]
     }
 ]

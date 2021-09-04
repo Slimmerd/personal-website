@@ -1,22 +1,10 @@
 import React, {useEffect, useRef} from 'react'
 import HelloWorld from "../components/hello";
 import InfoBlocks from '../components/infoBlocks';
-import styled from 'styled-components';
 import Head from 'next/head'
 
 import smoothscroll from 'smoothscroll-polyfill'
 
-const GlobalContainer = styled.div`
-  cursor: default;
-  margin: 0 auto;
-
-  section::before {
-    display: block;
-    content: "";
-    height: 80px;
-    margin: -80px 0 0;
-  }
-`
 
 const IndexPage = () => {
     const main = useRef<HTMLElement>(null)
@@ -68,8 +56,6 @@ const IndexPage = () => {
                 <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
             </Head>
             <HelloWorld/>
-            <GlobalContainer className={'container mx-auto'}>
-            </GlobalContainer>
             <InfoBlocks linksRef={linksRef} projectsRef={projectsRef} main={main}/>
         </>
     )

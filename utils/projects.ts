@@ -1,0 +1,42 @@
+export const PersonalProjects = [
+    {
+        Name: "RI0FF",
+        Description: "Created a full-stack bilingual website about the expedition with the dashboard where administrators can publish and manage a blog, photos and moderate chat messages",
+        WebsiteLink: "https://ri0ff.com/",
+        Github: "https://github.com/Slimmerd/RI0Fwebsite",
+        Web: true,
+        Frontend: ["React", "Redux", "Redux-thunk", "Styled-Components", "Next-translate", "Ant.design"],
+        Backend: ["Express", "Helmet", "Mongoose", "REST API", "Docker"],
+    }, {
+        Name: "RRC",
+        Description: "Worked on implementation of fullstack in-company project",
+        WebsiteLink: null,
+        Github: null,
+        Web: true,
+        Frontend: ["Next.js", "React", "Styled-Components", "Apollo Client"],
+        Backend: ["Express", "Prisma", "GraphQL", "Docker", "PostgreSQL", 'Redis'],
+    }, {
+        Name: "Discord bot",
+        Description: "Implemented Discord bot with moderation features and auto-role management tool. New people who joined the server don’t need to wait for the admin to obtain a role. A person can start a vote, and people with chosen a role can approve or decline this request",
+        WebsiteLink: null,
+        Github: "https://github.com/Slimmerd/DiscordBot",
+        Web: false,
+        Technologies: ["JavaScript, MongoDB, Discord.js"],
+    }, {
+        Name: "Habit and todo tracker",
+        Description: "Developed mobile app for tracking habits and todos by using flutter",
+        WebsiteLink: null,
+        Github: "https://github.com/Slimmerd/habit_tracker",
+        Web: false,
+        Technologies: ["Dart, Flutter"],
+    },
+    {
+        Name: "Personal website",
+        Description: "Performed website using Next.js, Vercel and typescript",
+        WebsiteLink: null,
+        Github: "https://github.com/Slimmerd/personal-website",
+        Web: true,
+        Frontend: ["Next.js", "React", "Styled-Components", "Tailwind"],
+        Backend: ["Vercel"],
+    },
+]

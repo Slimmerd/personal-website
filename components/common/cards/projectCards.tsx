@@ -61,8 +61,8 @@ const ProjectCards: React.FC<{ item: any }> = ({item}) => {
             <div className={'description'}>{item.Description}
             </div>
 
-            <a className={'link'} href={item.WebsiteLink}>Website link</a>
-            <a className={'link'} href={item.Github}>Github link</a>
+            {item.WebsiteLink && <a className={'link'} href={item.WebsiteLink}>Website link</a>}
+            {item.Github && <a className={'link'} href={item.Github}>Github link</a>}
 
             <div className="grid grid-cols-2 gap-2">
                 {item.Web ? <>
