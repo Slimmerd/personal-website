@@ -69,7 +69,7 @@ const Home: NextPage = () => {
                         </NextLink>
                     </Box>
                     <Box>
-                        <NextLink href="" scroll={false} passHref>
+                        <NextLink href="/Silin.pdf" scroll={false} passHref>
                             <Button leftIcon={<IoDocument/>} colorScheme="teal">
                                 CV
                             </Button>
