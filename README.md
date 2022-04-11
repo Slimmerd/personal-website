@@ -10,9 +10,8 @@
 
 * Next.js
 * React
-* Styled-component
-* Smoothscroll-polyfill
-* Tailwind
+* Framer-Motion
+* Chakra UI
 
 
 ## 📤 Deployment:
