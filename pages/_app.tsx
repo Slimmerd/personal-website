@@ -1,22 +1,29 @@
-import React from 'react'
-import {AppProps} from 'next/app'
-import {ThemeProvider} from 'styled-components'
-import "tailwindcss/tailwind.css";
-import GlobalStyle from '../styles/global'
-import theme from '../styles/theme'
-import Layout from "../components/layout/layout";
+import type {AppProps} from 'next/app'
+import Layout from "../components/layouts/main"
+import ChakraCookie from "../components/themeCookie";
+import {AnimatePresence} from "framer-motion";
 
-const MyApp: React.FC<AppProps> = ({Component, pageProps}) => {
+if (typeof window !== 'undefined') {
+    window.history.scrollRestoration = 'manual'
+}
 
+function MyApp({Component, pageProps, router}: AppProps) {
     return (
-        <>
-            <ThemeProvider theme={theme}>
-                <GlobalStyle/>
-                <Layout>
-                    <Component {...pageProps} />
-                </Layout>
-            </ThemeProvider>
-        </>
+        <ChakraCookie cookies={pageProps.cookies}>
+            <Layout router={router}>
+                <AnimatePresence
+                    exitBeforeEnter
+                    initial={true}
+                    onExitComplete={() => {
+                        if (typeof window !== 'undefined') {
+                            window.scrollTo({ top: 0 })
+                        }
+                    }}
+                >
+                <Component {...pageProps} key={router.route} />
+                </AnimatePresence>
+            </Layout>
+        </ChakraCookie>
     )
 }
 
